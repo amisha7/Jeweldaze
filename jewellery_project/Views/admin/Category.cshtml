@@ -1,0 +1,100 @@
+﻿@model jewellery_project.Models.Admin
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+@using (Html.BeginForm("Category", "admin", FormMethod.Post))
+{
+      @Html.HiddenFor(m => m.cat_id)
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="form-w3layouts">
+                <!-- page start-->
+                <!-- page start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                Category
+                            </header>
+                            <div class="panel-body">
+                                <div class="position-center">
+                                    <form role="form">
+
+                                        <div class="form-group">
+                                            <label for="state">Category</label>
+                                           
+                                            @Html.TextBoxFor(m => m.cat_name, new { @class = "form-control" , @required=""})
+                                            @Html.ValidationMessageFor(m=> m.cat_name)
+                                            <br />
+                                        </div>
+                                        <input type="submit" class="btn btn-info" value="Submit">
+                                      
+                                    </form>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+                </div>
+
+
+                <!-- page end-->
+            </div>
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Category table
+                    </div>
+                    <div>
+                        <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                            <thead>
+                                <tr>
+                                    <th data-breakpoints="xs">ID</th>
+                                    <th>Category Name</th>
+                                    <th data-breakpoints="xs">DOC</th>
+
+                                    <th data-breakpoints="xs sm md" data-title="DOB">DOM</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.rj)
+                                {
+                                    <tr data-expanded="true">
+                                        <td>@item.cat_id</td>
+                                        <td>@item.cat_name</td>
+                                        <td>@item.cat_DOC</td>
+                                        <td>@item.cat_DOM</td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit_category", new { @id = item.cat_id })
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Delete", "Delete_category", new { @id = item.cat_id })
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+}
+

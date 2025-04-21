@@ -1,0 +1,116 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Reg";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+@using (Html.BeginForm("Reg", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.user_id)
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h1>Register</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Register</h2>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+        <div class="login">
+            <form>
+                <div class="col-md-6 login-do">
+                    <div class="login-mail">
+                        @*<input type="text" placeholder="Name" required="">*@
+                        @Html.TextBoxFor(m => m.fname, new { @placeholder = "First Name", @required = "" })
+                    </div>
+                    <div class="login-mail">
+                        @Html.TextBoxFor(m => m.mname, new { @placeholder = "Middle Name", @required = "" })
+                    </div>
+                    <div class="login-mail">
+                        @Html.TextBoxFor(m => m.lname, new { @placeholder = "Last Name", @required = "" })
+                    </div>
+                    <div>
+                        &nbsp;&nbsp; <label>Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        @Html.RadioButtonFor(m => m.gender, "Male")<text>Male</text>
+                        @Html.RadioButtonFor(m => m.gender, "Female")<text>Female</text>
+
+                       
+                    </div><br />
+                    <div>
+                       
+                        @Html.DropDownListFor(m => m.state_id, Model.states as List<SelectListItem>, "--Select State--", new { @id = "ddlst", @class = "form-control", @required = "" })
+                        
+                    </div>
+                    <br />
+                    <div>
+                        @if (Model.city != null)
+                        {
+                        @Html.DropDownListFor(m => m.city_id, Model.city as List<SelectListItem>, "--Select City--", new { @id = "ddlct", @class = "form-control", @required = "" })
+                        }
+                        else
+                        {
+                            @Html.DropDownListFor(m => m.city_id, new List<SelectListItem>(), "--Select City--", new { @id = "ddlct", @class = "form-control", @required = "" })
+
+                        }
+                       
+                    </div><br />
+                    <div >
+                        @Html.TextAreaFor(m => m.address, new { @placeholder = "Address", @class = "form-control", rows = "3", @required = "" })
+                      
+                    </div><br />
+                    <p style="color:red">@ViewBag.mobile</p>
+
+                    <div class="login-mail">
+
+                        @Html.TextBoxFor(m => m.mobile, new { @placeholder = "Mobile Number", @required = ""})
+
+                    </div>
+                    <p style="color:red">@ViewBag.email</p>
+
+                    <div class="login-mail">
+                        @Html.TextBoxFor(m => m.email, new { @placeholder = "Email", @required = "" })
+                    </div>
+                    
+                    <div class="login-mail">
+                        @Html.PasswordFor(m => m.password, new { @placeholder = "Password",@required="" })
+                    </div>
+
+                    <div class="login-mail">
+                        @Html.PasswordFor(m => m.confirm_password, new { @placeholder = "Confirm Password",@required=""  })
+
+                        
+                    </div><p style="color:red">@ViewBag.conpass</p>
+                    <br />
+
+                    <label class="hvr-skew-backward">
+                        <input type="submit" value="Submit">
+                    </label>
+
+                </div>
+                <div class="col-md-6 login-right">
+                    <h3>Completely Free Account</h3>
+
+                    <p>
+                        Get Yourself Register Now To Be the first to know about our latest offers and new collections.By getting registered,you agree with the terms & condition of our site.
+                        Through registerd,We Will able to contact With You in a right way.By creating an account you will be able to shop faster and receive regular updates on Products.
+
+                    </p>
+                    <a href="@Url.Action("Login","User_new")" class="hvr-skew-backward">Login</a>
+
+                </div>
+
+                <div class="clearfix"> </div>
+            </form>
+        </div>
+
+    </div>
+    <br />
+    <br />
+}
+<!--//login-->
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Cascade1.js"></script>

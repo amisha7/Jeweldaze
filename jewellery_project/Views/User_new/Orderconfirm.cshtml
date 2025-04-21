@@ -1,0 +1,32 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Orderconfirm";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+@using (Html.BeginForm("Orderconfirm", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="banner-top">
+        <div class="container">
+            <h1>Confirmation</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Confirmation</h2>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="page">
+            <div class="grid_3 grid_4">
+                <div class="page-header">
+                    <h1 style="font-weight: bold; color: #f67777">Order Id:@Session["Order_id"]</h1>
+                    <p style="color:green">Your Order is Successfully Placed..Thank You</p>
+                    <br />
+                    <br />
+                    <a href="@Url.Action("Invoice", "User_new")" class="btn btn-lg btn-default" style="background-color:#f67777;color:white">View Invoice</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

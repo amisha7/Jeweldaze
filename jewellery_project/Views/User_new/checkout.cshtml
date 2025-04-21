@@ -1,0 +1,195 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "checkout";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+@using (Html.BeginForm("checkout", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="banner-top">
+        <div class="container">
+            <h1>Payment Details</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>checkout</h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="page">
+            @if (Convert.ToInt16(Session["verification"])==0)
+            { 
+            <div class="grid_3 grid_4">
+                <div class="page-header">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#tab1" data-toggle="tab" style="font-weight:bold">Credit Card</a></li>
+                        <li class=""><a href="#tab2" data-toggle="tab" style="font-weight:bold">Debit Card</a></li>
+                        <li class=""><a href="#tab3" data-toggle="tab" style="font-weight:bold">Cash On Delivery</a></li>
+
+
+                        <li style="font-weight:bold;color:red;padding-left:500px;">Amount Payable:@Session["grand_total"]</li>
+                    </ul>
+
+                </div>
+                <div class="tab-content one">
+                    <div class="tab-pane active text-style" id="tab1">
+                        <div class="facts">
+                            <p>
+                                <form>
+
+                                    <div class="col-md-12">
+                                        <span>Card Holder's Name </span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.name_on_card, new { @class = "form-control", @placeholder = "Card Holder's Name",@required=""})
+                                        @Html.ValidationMessageFor(m => m.address, "", new { @class = "text-danger" })
+
+
+                                    </div><br /><br />
+                                    <div class="col-md-12">
+                                        <br />
+                                        <span>Card No. </span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.card_no, new { @class = "form-control", @placeholder = "Card No.", @required = "" })
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <br />
+                                        <span>Expiry Date</span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.card_exp, new { @class = "form-control", @placeholder = "MM/YY", @required = "" })
+                                        <br />
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <br />
+                                        <span>CVV</span>
+                                        @*<input type="text" value="">*@
+                                        @Html.PasswordFor(m => m.cvv, new { @class = "form-control", @placeholder = "CVV", @required = "" })
+                                        <br />
+                                    </div>
+
+                                    <div class="col-md-4"></div>
+                                    <button type="button" class="btn btn-lg btn-default" style="background-color:#f67777;color:white" onclick="location.href='@Url.Action("placeordercredit", "User_new", new { @id = Session["u_id"] })'">Place Order</button>
+                                </form>
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane text-style" id="tab2">
+
+                        <div class="facts">
+                            <p>
+                                <form>
+
+                                    <div class="col-md-12">
+                                        <span>Name Of Card </span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.name_on_card, new { @class = "form-control", @placeholder = "Name Of Card", @required = "" })
+                                    </div>
+                                    <div class="col-md-12">
+                                        <br />
+                                        <span>Card No. </span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.card_no, new { @class = "form-control", @placeholder = "Card No.",@type="number", @required = "" })
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <br />
+                                        <span>Expiry Date</span>
+                                        @*<input type="text" value="">*@
+                                        @Html.TextBoxFor(m => m.card_exp, new { @class = "form-control", @placeholder = "MM/YY", @required = "" })
+                                        <br />
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <br />
+                                        <span>CVV</span>
+                                        @*<input type="text" value="">*@
+                                        @Html.PasswordFor(m => m.cvv, new { @class = "form-control", @placeholder = "CVV", @required = "" })
+                                        <br />
+                                    </div>
+
+                                    <div class="col-md-4"></div>
+                                    <button type="button" class="btn btn-lg btn-default" style="background-color:#f67777;color:white" onclick="location.href='@Url.Action("placeorderdebit", "User_new", new { @id = Session["u_id"] })'">Place Order</button>
+                                </form>
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane text-style" id="tab3">
+
+                        <div class="facts">
+                            <p>
+                                @foreach (var item in Model.userdetail)
+                                {
+                                <div class="col-md-12">
+                                    <span style="font-weight:bold">Name:</span>
+                                    <label style="font-weight:100">@item.fname @item.mname @item.lname</label><br />
+                                    <span style="font-weight:bold">Delivery Address:</span>
+                                    @if (Session["delivery_address"] == null)
+                                        {
+                                        <label style="font-weight:100">@Session["address"]</label><br />
+                                        }
+                                        else
+                                        {
+                                        <label style="font-weight:100">@Session["delivery_address"]</label><br />
+                                        }
+                                    <span style="font-weight:bold">Email:</span>
+                                    <label style="font-weight:100">@item.email</label><br />
+                                    <span style="font-weight:bold">Contact:</span>
+                                    <label style="font-weight:100">@item.mobile</label><br /><br />
+
+                                </div>
+                                }
+                                <button type="button" class="btn btn-lg btn-default" style="background-color:#f67777;color:white" onclick="location.href='@Url.Action("placeordercod", "User_new", new { @id = Session["u_id"] })'">Place Order</button>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            }
+            else
+            {
+                 <div class="tab-content one">
+                    <div class="tab-pane active text-style">
+                        <div class="facts">
+                                <p>
+                                    <form>
+
+                                        <div class="col-md-12">
+                                            <br />
+                                            <span>Verification Code</span>
+                                            @*<input type="text" value="">*@
+                                            @Html.TextBoxFor(m => m.confirmation, new { @class = "form-control", @placeholder = "Verification Code"})
+                                            <br />
+                                        </div>
+
+
+                                        <div class="col-md-4"></div>
+                                        <input type="submit" class="btn btn-lg btn-default" style="background-color:#f67777;color:white" value="Submit" />
+                                        @*<button type="submit" class="btn btn-lg btn-default" style="background-color:#f67777;color:white">Submit</button>*@
+                                    </form>
+                                </p>
+
+                            </div>
+
+                        
+                    </div>
+                </div>
+            }
+        
+          </div>
+    </div>
+
+}

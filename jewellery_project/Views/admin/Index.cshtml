@@ -1,0 +1,16 @@
+﻿@model jewellery_project.Models.kk
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+<h2 style="background-color:white;">Index</h2>
+@using (Html.BeginForm("Index","admin"))
+{ 
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-denger" })
+   @Html.TextBoxFor(m => m.name, new { @class="form-control",@placeholder="name"})
+    <br />
+    <input type="submit" value="add" />
+}
+

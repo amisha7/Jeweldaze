@@ -1,0 +1,61 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "feedback";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+@using (Html.BeginForm("feedback", "User_new", FormMethod.Post))
+{
+  
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h1>Feedback</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Feedback</h2>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+        <div class="login">
+            <form>
+                <div class="col-md-6 login-do">
+                    <div class="login-mail">
+                        @*<input type="text" placeholder="Name" required="">*@
+                        @Html.TextBoxFor(m => m.name, new { @placeholder = "Name", @required = "" })
+                    </div>
+                    <p style="color:red">@ViewBag.email</p>
+                    <div class="login-mail">
+                        @Html.TextBoxFor(m => m.email, new { @placeholder = "Email", @required = "" })
+                    </div>
+                    
+                    <div>
+
+                        @Html.TextAreaFor(m => m.comment, new { @placeholder = "Comment", rows="5",cols="65",@required="" })
+
+                    </div>
+                   <br />
+
+
+                    <label class="hvr-skew-backward">
+                        <input type="submit" value="Submit">
+                    </label>
+
+                </div>
+                <div class="col-md-6 login-right">
+                    <h3>Feedback</h3>
+
+                    <p>
+                        We appreciate the time you have taken to help us to  improve our site and service.Please use the form to provide us your feedback !
+                    </p>
+
+                </div>
+
+                <div class="clearfix"> </div>
+            </form>
+        </div>
+
+    </div>
+    <br />
+    <br />
+}
+

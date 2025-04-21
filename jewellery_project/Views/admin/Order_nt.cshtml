@@ -1,0 +1,77 @@
+﻿@model jewellery_project.Models.Admin
+@{
+    ViewBag.Title = "Order_nt";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+
+    int temp = 1;
+}
+
+
+
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Order Details
+                </div>
+                <div>
+                    <table class="table">
+
+                        <tr>
+                            <th data-breakpoints="xs">Order ID</th>
+                            <th>User Id</th>
+                            <th>Date</th>
+                            <th>Product</th>
+
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+
+
+                        </tr>
+
+                        @foreach (var item in Model.ons1)
+                        {
+                            <tr>
+                                <td rowspan="@item.a">@item.order_id</td>
+                                <td rowspan="@item.a">@item.user_id</td>
+                                <td rowspan="@item.a">@item.date</td>
+                                @{int i = 0;}
+                                @foreach (var item1 in Model.ons)
+                                {
+                                    if(item.order_id==item1.order_id)
+                                    { 
+                                    if (i > 0)
+                                    {
+                                       @: </tr> <tr>
+                                    }
+                                    <td>@item1.name<br />
+                                        @if (item1.image != null)
+                                        {
+                                            <img src="@Url.Content(item1.image)" height="70" width="70" />
+                                        }
+                        </td>
+                                    <td>@item1.quantity</td>
+                                    <td>@item1.price</td>
+                                    <td>@item1.total</td>
+                                    i++;
+                                    }
+
+                                }
+                                </tr>
+                        }
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>

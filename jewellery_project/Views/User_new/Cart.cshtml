@@ -1,0 +1,143 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+@using (Html.BeginForm("Cart", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.cart_id)
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h1>Cart</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Cart</h2>
+        </div>
+    </div>
+    <!--login-->
+    @*<script>
+            $(document).ready(function (c) {
+                $('.close1').on('click', function (c) {
+                    $('.cart-header').fadeOut('slow', function (c) {
+                        $('.cart-header').remove();
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function (c) {
+                $('.close2').on('click', function (c) {
+                    $('.cart-header1').fadeOut('slow', function (c) {
+                        $('.cart-header1').remove();
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function (c) {
+                $('.close3').on('click', function (c) {
+                    $('.cart-header2').fadeOut('slow', function (c) {
+                        $('.cart-header2').remove();
+                    });
+                });
+            });
+        </script>*@
+    <div class="check-out">
+        <div class="container">
+
+            <div class="bs-example4" data-example-id="simple-responsive-table">
+                <div class="table-responsive">
+                    <table class="table-heading simpleCart_shelfItem">
+                        <tr>
+                            <th class="table-grid">Item</th>
+
+                            <th>Prices</th>
+                            <th>Delivery </th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+
+                        </tr>
+
+                        @foreach (var item in Model.cartitems)
+                        {
+                            <tr class="cart-header">
+
+                                <td class="ring-in">
+                                    <a href="@Url.Action("viewproductdetails", "User_new", new { @id = item.p_id })" class="at-in"><img src="@Url.Content(item.image)" class="img-responsive" alt=""></a>
+                                    <div class="sed">
+                                        <h5><a href="@Url.Action("viewproductdetails", "User_new", new { @id = item.p_id })">@item.name</a></h5>
+
+                                    </div>
+                                    <div class="clearfix"> </div>
+
+
+                                </td>
+                                <td>@item.price</td>
+                                <td>FREE SHIPPING</td>
+                                <td>
+                                    <div class="quantity">
+                                        <div class="quantity-select">
+
+
+                                            <button type="button" id="sub" class="sub btn" style="float:left" onclick="location.href='@Url.Action("minusquantity", "User_new", new { @id = item.cart_id,@q=item.quantity,@p=item.price })'"><span class="glyphicon glyphicon-minus"></span></button>
+
+                                            @Html.TextBoxFor(m => m.quantity, new { @Value = item.quantity, @id = "1", @class = "field form-control", style = "width:40px;float:left;margin-left:7px;margin-right:7px" })
+                                            <button type="button" id="add" class="add btn" onclick="location.href='@Url.Action("plusquantity", "User_new", new { @id = item.cart_id,@q=item.quantity,@p=item.price })'"><span class="glyphicon glyphicon-plus"></span></button>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item_price">@item.total</td>
+                                <td>
+                                    <a href="@Url.Action("removecartitem", "User_new", new { @id = item.cart_id })"><i class="glyphicon glyphicon-remove-circle" style="color: #f67777; font-size: 30px"></i></a>
+                                </td>
+                            </tr>
+
+                        }
+
+                    </table>
+                </div>
+            </div>
+            <div class="produced">
+                <a href="@Url.Action("cartchecking", "User_new")" class="hvr-skew-backward">Produced To Buy</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <!--//login-->
+}
+<script>
+    var unit = document.getElementById("1").value;
+    var total;
+    $('.field').change(function () {
+        unit = this.value;
+    });
+    $('.add').click(function () {
+        if (unit < 10) {
+            unit++;
+            var $input = $(this).prevUntil('.sub');
+            $input.val(unit);
+            unit = unit;
+        }
+    });
+    $('.sub').click(function () {
+        if (unit > 1) {
+            unit--;
+            var $input = $(this).nextUntil('.add');
+            $input.val(unit);
+        }
+    });
+</script>
+
+@*<script>
+    $(function () {
+        $('.add').click(function () {
+            var ipvalue = $("#IP").val();
+            this.href = this.href.replace("xxx", ipvalue);
+        });
+    });
+</script>*@
+

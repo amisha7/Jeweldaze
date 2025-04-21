@@ -1,0 +1,193 @@
+﻿@model jewellery_project.Models.Admin
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+@using (Html.BeginForm("Product", "admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+      
+       @Html.AntiForgeryToken()    
+     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    
+     @Html.HiddenFor(m => m.p_id)
+
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="form-w3layouts">
+                <!-- page start-->
+                <!-- page start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                Product
+                            </header>
+                            <div class="panel-body">
+                                <div class="position-center">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="category">Category</label>
+                                            @Html.DropDownListFor(m => m.category_id, Model.cat as List<SelectListItem>, "--Select Category--", new { @class = "form-control input-sm m-bot15", @required = "" })
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="collection">Collection</label>
+                                            @Html.DropDownListFor(m => m.collection_id, Model.col as List<SelectListItem>, "--Select Collection--", new { @class = "form-control input-sm m-bot15", @required = "" })
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pname">Product Name</label>
+
+                                            @Html.TextBoxFor(m => m.pname, new { @class = "form-control", placeholder = "Enter Product Name", @required = "" })
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pprice">Product Price</label>
+                                            @*<input type="text" class="form-control" id="pprice" placeholder="Enter Product price">*@
+                                            @Html.TextBoxFor(m => m.price, new { @class = "form-control", @required = "" })
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="psize">Product size</label>
+                                            @*<input type="text" class="form-control" id="psize" placeholder="Enter Product size">*@
+                                            @Html.TextBoxFor(m => m.size, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.size, "", new { @class = "text-danger"})
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pcolor">Product Color</label>
+                                            @*<input type="text" class="form-control" id="pname" placeholder="Enter Product Name">*@
+                                            @Html.DropDownListFor(m => m.color, ViewBag.clr as List<SelectListItem>, "--Select Color--", new { @class = "form-control input-sm m-bot15", @required = "" })
+                                            @Html.ValidationMessageFor(m => m.color, "", new { @class = "text-danger" })
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pdes">Product Description</label>
+                                            @*<textarea class="form-control " id="pdes" name="pdes"></textarea>*@
+                                            @Html.TextAreaFor(m => m.description, new { @class = "form-control", rows = 5, @required = "" })
+
+                                       </div>
+                                        <div class="form-group">
+                                            <label for="poffer">Product Offer</label>
+                                            @*<input type="text" class="form-control" id="poffer" placeholder="Enter Product Offer">*@
+                                            @Html.TextBoxFor(m => m.offer, new { @class = "form-control" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="pimg">Product Image</label>
+                                            <input type="file" id="src" name="ffl" required="" />
+                                            @if (Model.pimage != null)
+                                            {
+                                                <img id="target" src="@Url.Content(Model.pimage)" height="100" width="100" />
+                                             
+                                            } 
+                                            else
+                                            {      
+                                             <img id="target" height="100" width="100" />
+                                            }                                   
+                                        </div>
+                                        <input type="submit" class="btn btn-info" value="Submit" />
+                                    </form>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+                </div>
+
+
+                <!-- page end-->
+            </div>
+            <div class="table-agile-info" >
+                <div class="panel panel-default" style="overflow:scroll">
+                    <div class="panel-heading">
+                        Product table
+                    </div>
+                    <div>
+                        <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                            <thead>
+                                <tr>
+                                    <th data-breakpoints="xs">ID</th>
+                                    <th>Category</th>
+                                    <th>Collection</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Size</th>
+                                    <th>Color</th>
+                                    <th>Description</th>
+                                    <th>Offer</th>
+                                    <th>Image</th>
+                                    <th data-breakpoints="xs">DOC</th>
+
+                                    <th data-breakpoints="xs sm md" data-title="DOB">DOM</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.rj)
+                                {
+                                    <tr data-expanded="true">
+                                        <td>@item.p_id</td>
+                                        <td>@item.cat_name</td>
+                                        <td>@item.col_name</td>
+                                        <td>@item.pname</td>
+                                        <td>@item.price</td>
+                                        <td>@item.size</td>
+                                        <td>@item.color</td>
+                                        <td>@item.description</td>
+                                        <td>@item.offer</td>
+                                        <td>
+                                            @if (item.pimage != null)
+                                            {
+                                                <img src="@Url.Content(item.pimage)" height="100" width="100" />
+                                            }
+                                        </td>
+
+                                        <td>@item.pDOC</td>
+                                        <td>@item.pDOM</td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit_pro", new { @id = item.p_id })
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Delete", "Delete_pro", new { @id = item.p_id, @nm = item.pname })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+}
+
+<script>
+    function showImage(src, target) {
+        var fr = new FileReader();
+        fr.onload = function (e) { target.src = this.result; };
+        src.addEventListener("change", function () {
+            fr.readAsDataURL(src.files[0]);
+        });
+    }
+    var src = document.getElementById("src");
+    var target = document.getElementById("target");
+    showImage(src, target);
+</script>
+

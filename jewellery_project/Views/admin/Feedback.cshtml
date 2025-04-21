@@ -1,0 +1,64 @@
+﻿@model  jewellery_project.Models.Admin
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+@using (Html.BeginForm("Feedback", "admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+
+    <section id="main-content">
+        <section class="wrapper">
+
+            <div class="table-agile-info">
+                <div class="panel panel-default" style="overflow:scroll">
+                    <div class="panel-heading">
+                        Feedback Details
+                    </div>
+                    <div>
+                        <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                            <thead>
+                                <tr>
+                                    <th data-breakpoints="xs">ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                     <th>Comment</th>
+                                    <th>DOC</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.rjs)
+                                {
+                                    <tr data-expanded="true">
+                                        <td>@item.f_id</td>
+                                        <td>@item.name</td>
+                                        <td>@item.email</td>
+                                        <td>@item.comment</td>
+                                        <td>@item.DOC</td>
+
+
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+}
+

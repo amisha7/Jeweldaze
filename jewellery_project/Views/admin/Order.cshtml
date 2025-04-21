@@ -1,0 +1,60 @@
+﻿@model jewellery_project.Models.Admin
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+@Html.HiddenFor(m => m.order_id)
+
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Order Details
+                </div>
+                <div>
+                    <table class="table" style="z-index:2">
+
+                        <tr>
+                            <th data-breakpoints="xs">Order ID</th>
+                            <th>User Id</th>
+                            <th>Status</th>
+
+                            <th>Details</th>
+
+                        </tr>
+
+                        @foreach (var item in Model.rjd)
+                        {
+                            <tr>
+                                <td>@item.order_id</td>
+                                <td>@item.user_id</td>
+                                <td>@item.status</td>
+
+                                <td>
+                                    <a href="@Url.Action("editorder", "admin", new { @id = item.order_id })" data-toggle="modal" data-target="#myModal">Details</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+
+
+<!-- Modal -->
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+
+<div class="modal fade" id="myModal" style="margin-top:10%;">
+    @Html.Partial("orderedit")
+</div>
+

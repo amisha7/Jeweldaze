@@ -1,0 +1,65 @@
+﻿@model jewellery_project.Models.Admin
+
+@{
+    ViewBag.Title = "Stock";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+
+
+  
+    @Html.HiddenFor(m => m.stock_id)
+
+    <section id="main-content">
+        <section class="wrapper">
+
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Stock table
+                    </div>
+                    <div>
+                        <table class="table">
+                           
+                                <tr>
+                                    <th data-breakpoints="xs">ID</th>
+                                    <th>Product Name</th>
+                                    <th>Stock</th>
+                                    <th data-breakpoints="xs">DOC</th>
+                                    <th data-breakpoints="xs sm md" data-title="DOB">DOM</th>
+                                    <th>Edit</th>
+
+                                </tr>
+                          
+                                @foreach (var item in Model.rj1)
+                                {
+                                    <tr>
+                                        <td>@item.stock_id</td>
+                                        <td>@item.product_nm</td>
+                                        <td>@item.stock</td>
+                                        <td>@item.DOC</td>
+                                        <td>@item.DOM</td>
+                                        <td>
+                                            <a href="@Url.Action("Editstock", "admin", new { @id = item.stock_id })" data-toggle="modal" data-target="#myModal">Edit</a>
+                                        </td>
+                                    </tr>
+                                }
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+
+<!-- Modal -->
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+
+    <div class="modal fade" id="myModal" style="margin-top:10%;">
+        @Html.Partial("stockedit")
+</div>

@@ -1,0 +1,192 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Myaccount";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+@*<style>
+        #div2 {
+            display: none;
+        }
+    </style>*@
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+@using (Html.BeginForm("Myaccount", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.user_id)
+    <div class="banner-top">
+        <div class="container">
+            <h1>My Account</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>My Account</h2>
+        </div>
+    </div>
+
+    <div class="contact">
+
+        <div class="contact-form">
+            <div class="container">
+                <div class="col-md-4 contact-left">
+                    <h3>Account Details </h3>
+                    <div class="address">
+                        <div class=" address-grid" style="border:1px solid lightgray; padding-left:50px">
+                            <i class="glyphicon glyphicon-user" style="font-size:30px"></i>
+                            <div class="address1">
+                                <h3>@Session["fname"]</h3>
+                                <p>@Session["email"]</p>
+
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h5>
+                                @Session["address"]
+                            </h5>
+                            <br /><br />
+
+                            @*<label class="hvr-skew-backward">
+
+                                   <a id="bt1" href=""><span style="color:white">Manage Profile</span></a>
+                                </label>*@
+
+                            <button type="button" id="bt1" class="btn btn-lg btn-default" onclick="location.href='@Url.Action("editprofile", "User_new", new {@id=Session["u_id"] })'" style="background-color:#f67777;color:white">Manage Profile</button>
+
+                        </div>
+
+                    </div>
+                </div>
+                @if (Convert.ToInt16(Session["abc"]) != 1)
+                {
+                    <div id="div1" class="col-md-8 contact-top">
+
+                        <h3>Order History</h3><br />
+                        <div class="bs-example" data-example-id="contextual-table" style="border: 1px solid #eee">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+
+
+                                        <th class="table-grid">Item</th>
+                                        <th>Quantity</th>
+                                        <th>Prices</th>
+                                        <th>Subtotal</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.ols)
+                                    {
+                                        <tr class="active">
+
+
+                                            <td>@item.name<br />
+                                                @if (item.image != null)
+                                                {
+                                                    <img src="@Url.Content(item.image)" height="100" width="100" />
+                                                }
+                                            </td>
+                                            <td>@item.quantity</td>
+                                            <td>@item.price</td>
+                                            <td>@item.total</td>
+                                            <td>@item.DOC</td>
+                                           
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div id="div2" class="col-md-8 contact-top">
+
+                        <h3>Edit Profile</h3><br />
+                        <form>
+                            <div>
+                                <span>First Name </span>
+                                @*<input type="text" value="">*@
+                                @Html.TextBoxFor(m => m.fname, new { @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>Middle Name </span>
+                                @*<input type="text" value="">*@
+                                @Html.TextBoxFor(m => m.mname, new { @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>Last Name </span>
+                                @*<input type="text" value="">*@
+                                @Html.TextBoxFor(m => m.lname, new { @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>Gender </span>&nbsp;&nbsp;
+
+                                @*<input type="text" value="">*@
+                                @Html.RadioButtonFor(m => m.gender, "Male")<text>Male</text>
+                                @Html.RadioButtonFor(m => m.gender, "Female")<text>Female</text>
+                            </div>
+                            <div>
+                                <span>State</span>
+                                @*<input type="text" value="">*@
+                                @Html.DropDownListFor(m => m.state_id, Model.states as List<SelectListItem>, "--Select State--", new { @id = "ddlst", @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>City</span>
+                                @*<input type="text" value="">*@
+                                @if (Model.city != null)
+                                {
+                                    @Html.DropDownListFor(m => m.city_id, Model.city as List<SelectListItem>, "--Select City--", new { @id = "ddlct", @class = "form-control", @required = "" })
+                                }
+                                else
+                                {
+                                    @Html.DropDownListFor(m => m.city_id, new List<SelectListItem>(), "--Select City--", new { @id = "ddlct", @class = "form-control", @required = "" })
+
+                                }
+                            </div>
+                            <div>
+                                <span>Address</span>
+                                @*<input type="text" value="">*@
+                                @Html.TextAreaFor(m => m.address, new { @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>Mobile</span>
+                                @*<input type="text" value="">*@
+                                @Html.TextBoxFor(m => m.mobile, new { @class = "form-control", @required = "" })
+                            </div>
+                            <div>
+                                <span>Email</span>
+                                @*<input type="text" value="">*@
+                                @Html.TextBoxFor(m => m.email, new { @class = "form-control", @required = "" })
+                            </div>
+                            <button type="submit" id="bt2" class="btn btn-lg btn-default" style="background-color:#f67777;color:white">Save Changes</button>
+
+                        </form>
+
+
+                    </div>
+                }
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+}
+<br />
+<br />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Cascade1.js"></script>
+@*<script>
+        $(document).ready(function () {
+            $("#bt1").click(function () {
+                $("#div1").toggle();
+                $("#div2").show();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#bt2").click(function () {
+                $("#div1").show();
+                $("#div2").hide();
+            });
+        });
+    </script>*@

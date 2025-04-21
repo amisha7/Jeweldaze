@@ -1,0 +1,56 @@
+﻿@model jewellery_project.Models.Admin
+
+@using (Html.BeginForm("Order", "admin", FormMethod.Post))
+{
+    <div class="container" style="background-color:white; width:40%; border-radius:10px; margin:auto;">
+        <br />
+        @Html.HiddenFor(m => m.order_id)
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <a href="#" data-dismiss="modal" class="close">&times;</a>
+                </div>
+                <br />
+
+                <div class="row">
+                    <label for="poffer">Order Id</label>
+                    @Html.TextBoxFor(m => m.order_id, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                <div class="row">
+                    <label for="poffer">Grand Total</label>
+                    @Html.TextBoxFor(m => m.grandtotal, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                <div class="row">
+                    <label for="poffer">Delivery Address</label>
+                    @Html.TextBoxFor(m => m.address, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                <div class="row">
+                    <label for="poffer">Delivery Date</label>
+                    @Html.TextBoxFor(m => m.deliverydate, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                <div class="row">
+                    <label for="poffer">Payment Mode</label>
+                    @Html.TextBoxFor(m => m.paymentmode, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                
+                <div class="row">
+                    <label for="poffer">Status</label>
+                    @Html.TextBoxFor(m => m.status, new { @class = "form-control", @required = "" })
+                </div>
+
+                <br />
+                <div class="row">
+
+                    <input type="submit" name="command" value="Save Change" class="btn btn-primary" />
+                    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("cancelorder", "admin")'" >Cancel</button>
+
+
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br />
+    </div>
+
+}

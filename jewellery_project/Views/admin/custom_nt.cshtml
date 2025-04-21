@@ -1,0 +1,65 @@
+﻿@model jewellery_project.Models.Admin
+s
+@{
+    ViewBag.Title = "custom_nt";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Order Details
+                </div>
+                <div>
+                    <table class="table">
+
+                        <tr>
+                            <th data-breakpoints="xs">Custom Id</th>
+                            <th>Name</th>
+                            <th>Subject</th>
+                            <th>Product</th>
+
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Message</th>
+                            <th>Date</th>
+
+
+                        </tr>
+
+                        @foreach (var item in Model.ons2)
+                        {
+                            <tr>
+                                <td >@item.custom_id</td>
+                                <td >@item.name</td>
+                                <td>@item.subject</td>
+                               
+                               
+                                    <td>
+                                      
+                                    @if (item.image != null)
+                                    {
+                                        <img src="@Url.Content(item.image)" height="70" width="70" />
+                                    }
+                                </td>
+                                    <td>@item.email</td>
+                                    <td>@item.mobile</td>
+                                    <td>@item.message</td>
+                                <td>@item.date</td>
+   
+                            </tr>
+                        }
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+

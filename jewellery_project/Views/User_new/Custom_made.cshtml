@@ -1,0 +1,93 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Custom_made";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+@using (Html.BeginForm("Custom_made", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.user_id)
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h1>Custom Made</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Custom Made</h2>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+        <div class="login">
+            <form>
+                <div class="col-md-6 login-do">
+                    <div class="login-mail">
+                        @*<input type="text" placeholder="Name" required="">*@
+                        @Html.TextBoxFor(m => m.name, new { @placeholder = "Name", @required="" })
+                    </div>
+                    <p style="color:red">@ViewBag.email</p>
+
+                    <div class="login-mail">
+                        @Html.TextBoxFor(m => m.email, new { @placeholder = "Email", @required = "" })
+                    </div>
+                    <p style="color:red">@ViewBag.mobile</p>
+
+                    <div class="login-mail">
+
+                        @Html.TextBoxFor(m => m.mobile, new { @placeholder = "Mobile Number", @required = "" })
+
+                    </div>
+                    <div class="login-mail">
+
+                        @Html.TextBoxFor(m => m.subject, new { @placeholder = "Subject", @required = "" })
+
+                    </div>
+                    <div class="login-mail">
+
+                        <input type="file" name="ffl" id="src" required />
+                        <img id="target" height="100" width="100" />
+
+
+                    </div>
+                    <div>
+                        @Html.TextAreaFor(m => m.message, new { @placeholder = "message", @class = "form-control", rows = "3", @required = "" })
+
+                    </div><br />
+                   
+                  
+                    <label class="hvr-skew-backward">
+                        <input type="submit" value="Submit">
+                    </label>
+
+                </div>
+                <div class="col-md-6 login-right">
+                    <h3>Details</h3>
+
+                    <p>
+                        Buying custom product is not a new concept that’s how everything used to be. Now big stores, online retailers and local jewellers have made standardization (boring) and low prices (low quality) the rule of the day.
+                        We’re here to change the rules back.</p>
+
+                </div>
+
+                <div class="clearfix"> </div>
+            </form>
+        </div>
+
+    </div>
+    <br />
+    <br />
+}
+
+<script>
+    function showImage(src, target) {
+        var fr = new FileReader();
+        fr.onload = function (e) { target.src = this.result; };
+        src.addEventListener("change", function () {
+            fr.readAsDataURL(src.files[0]);
+        });
+    }
+    var src = document.getElementById("src");
+    var target = document.getElementById("target");
+    showImage(src, target);
+</script>
+
+

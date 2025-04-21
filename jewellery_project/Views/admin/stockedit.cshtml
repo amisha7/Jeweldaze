@@ -1,0 +1,36 @@
+﻿@model jewellery_project.Models.Admin
+
+@using (Html.BeginForm("Stock","admin",FormMethod.Post))
+{ 
+    <div class="container" style="background-color:white; width:40%; border-radius:10px; margin:auto;">
+        <br />
+        @Html.HiddenFor(m=>m.stock_id)
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <a href="#" data-dismiss="modal" class="close">&times;</a>
+                </div>
+                <br />
+               
+                <div class="row">
+                    <label for="poffer">Product</label>
+                    @Html.TextBoxFor(m => m.product_nm, new { @class = "form-control", @id = "disabledInput", @disabled = "" })
+                </div>
+                <div class="row">
+                    <label for="poffer">Stock</label>
+                    @Html.TextBoxFor(m => m.stock, new { @class = "form-control", @required = "" })
+                </div>
+                
+                <br />
+                <div class="row">
+
+                    <input type="submit"  name="command" value="Save Change" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br />
+    </div>
+    
+}

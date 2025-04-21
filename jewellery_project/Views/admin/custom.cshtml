@@ -1,0 +1,71 @@
+﻿@model jewellery_project.Models.Admin
+@{
+    ViewBag.Title = "custom";
+    Layout = "~/Views/Shared/admin_master.cshtml";
+}
+
+@using (Html.BeginForm("custom", "admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    
+    <section id="main-content">
+        <section class="wrapper">
+
+            <div class="table-agile-info">
+                <div class="panel panel-default" style="overflow:scroll">
+                    <div class="panel-heading">
+                        Custom Made Details
+                    </div>
+                    <div>
+                        <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                            <thead>
+                                <tr>
+                                    <th data-breakpoints="xs">ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile</th>
+                                    <th>Subject</th>
+                                    <th>Image</th>
+                                    <th>Message</th>
+                                    
+                                   
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.rjs)
+                                {
+                                    <tr data-expanded="true">
+                                        <td>@item.custom_id</td>
+                                        <td>@item.name</td>
+                                        <td>@item.email</td>
+                                        <td>@item.mobile</td>
+                                        <td>@item.subject</td>
+                                        <td>
+                                            @*@if(item.image!=null)
+                                        {*@
+                                                 <img src="@Url.Content(item.image)" height="100" width="100" />
+                                        @*}*@
+                                        </td>
+                                        <td>@item.message</td>
+                                        
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+}

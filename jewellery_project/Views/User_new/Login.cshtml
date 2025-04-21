@@ -1,0 +1,89 @@
+﻿@using CaptchaMvc.HtmlHelpers
+@using jewellery_project;
+@using CaptchaMvc;
+@model jewellery_project.Models.User
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+@using (Html.BeginForm("Login", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.user_id)
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h1>Login</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Login</h2>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+        <div class="login">
+
+            <form>
+                <div class="col-md-6 login-do">
+                    @if (Convert.ToInt16(Session["forget"]) == 0)
+                    {
+//@Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
+                        <p style="color:red">@ViewBag.emaillog</p>
+
+                        <div class="login-mail">
+
+                            @Html.TextBoxFor(m => m.email, new { @placeholder = "Email",@required=""})
+                           
+                            
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </div>
+                     //   @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+
+                        <div class="login-mail">
+                            @Html.PasswordFor(m => m.password, new { @placeholder = "Password" ,@required=""})
+                            <i class="glyphicon glyphicon-lock"></i>
+
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Captcha(4)
+                            <p class="Error" style="color:red;">  @ViewBag.ErrMessage </p>
+                        </div>
+                        <a class="news-letter " href="@Url.Action("forgetpassword","User_new")">
+                            Forget Password
+                        </a>
+                    }
+                    else
+                    {
+                        @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
+
+                        <div class="login-mail">
+                            @Html.TextBoxFor(m => m.email, new { @placeholder = "Enter Registered Email" })
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </div>
+                    }
+                    <label class="hvr-skew-backward">
+                        <input type="submit" value="Submit">
+                    </label>
+                </div>
+                <div class="col-md-6 login-right">
+                    <h3>Completely Free Account</h3>
+
+                    <p>
+                        Get Yourself Register Now To Be the first to know about our latest offers and new collections.By getting registered,you agree with the terms & condition of our site.
+                        Through registerd,We Will able to contact With You in a right way.By creating an account you will be able to shop faster and receive regular updates on Products.
+
+                    </p>
+                    <a href="@Url.Action("Reg","User_new")" class=" hvr-skew-backward">Register</a>
+
+                </div>
+
+                <div class="clearfix"> </div>
+            </form>
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <!--//login-->
+}
+

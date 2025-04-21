@@ -1,0 +1,126 @@
+﻿@model jewellery_project.Models.User
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@{
+    ViewBag.Title = "Productdetails";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Productdetails", "User_new", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+       <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+    @Html.HiddenFor(m => m.p_id)
+    <div class="banner-top">
+        <div class="container">
+            <h1>Product Details</h1>
+            <em></em>
+            <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Product Details</h2>
+        </div>
+    </div>
+    <div class="single">
+        @foreach (var item in Model.productdetail)
+        {
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="col-md-5 grid">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="@Url.Content(item.image)">
+                                    <div class="thumb-image"> <img src="@Url.Content(item.image)" data-imagezoom="true" class="img-responsive"> </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 single-top-in">
+                        <div class="span_2_of_a1 simpleCart_shelfItem">
+                            <h3>@item.name</h3>
+                            <p class="in-para"> A Lot More Variation in Each Product is Available !</p>
+                            <div class="price_single">
+                                <span class="reducedfrom item_price">@item.price</span>
+                                <div class="clearfix"></div>
+                            </div>
+                            <h4 class="quick">Quick Overview:</h4>
+                            <p class="quick_desc">@item.description</p>
+                            
+                            @*<div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value-minus">&nbsp;</div>
+                                   
+                                    <div class="entry value"><span>1</span></div>
+                                    <div class="entry value-plus active">&nbsp;</div>
+                                </div>
+                            </div>
+                            <!--quantity-->
+                            <script>
+                                $('.value-plus').on('click', function () {
+                                    var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
+                                    divUpd.text(newVal);
+                                });
+
+                                $('.value-minus').on('click', function () {
+                                    var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
+                                    if (newVal >= 1) divUpd.text(newVal);
+                                });
+                            </script>
+                            <!--quantity-->*@
+                            <div class="quantity">
+                                <label>Quantity</label><br /><br />
+                                <div class="quantity-select">
+                                   
+
+                                        <button type="button" id="sub" class="sub btn" style="float:left"><span class="glyphicon glyphicon-minus"></span></button>
+
+                                        @Html.TextBoxFor(m => m.quantity, new { @Value = "1", @id = "1", @class = "field form-control", style = "width:40px;float:left;margin-left:7px;margin-right:7px" })
+
+                                        <button type="button" id="add" class="add btn"><span class="glyphicon glyphicon-plus"></span></button>
+
+                                    
+                                </div>
+                            </div>
+
+                            @*<a href="#" class="add-to item_add hvr-skew-backward">Add to cart</a>*@
+                            <input type="submit" class="add-to item_add hvr-skew-backward" value="Add to cart">
+                            <div class="clearfix"> </div>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!---->
+                    
+                    <!---->
+                </div>
+
+            </div>
+        }
+
+    </div>
+}
+
+<script>
+    var unit = document.getElementById("1").value;
+    var total;
+    $('.field').change(function () {
+        unit = this.value;
+    });
+    $('.add').click(function () {
+        if (unit < 10) {
+            unit++;
+            var $input = $(this).prevUntil('.sub');
+            $input.val(unit);
+            unit = unit;
+        }
+    });
+    $('.sub').click(function () {
+        if (unit > 1) {
+            unit--;
+            var $input = $(this).nextUntil('.add');
+            $input.val(unit);
+        }
+    });
+</script>
+
+
+

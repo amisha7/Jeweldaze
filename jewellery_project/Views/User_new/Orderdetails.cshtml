@@ -1,0 +1,134 @@
+﻿@model jewellery_project.Models.User
+@{
+    ViewBag.Title = "Orderdetails";
+    Layout = "~/Views/Shared/Usermaster.cshtml";
+}
+
+
+<div class="banner-top">
+    <div class="container">
+        <h1>Order Details</h1>
+        <em></em>
+        <h2><a href="@Url.Action("Home","User_new")">Home</a><label>/</label>Order Details</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page">
+        <div class="grid_3 grid_4">
+            <div class="page-header">
+                <h1 style="font-weight:bold">Your item(s) will be delivered to this address</h1>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <colgroup>
+                        <col class="col-xs-2">
+                        <col class="col-xs-6">
+                    </colgroup>
+
+                    <tbody>
+                        @foreach (var item in Model.userdetail)
+                        {
+                            <tr>
+                                <td><span style="color:black;font-weight:bold">Full Name:</span></td>
+                                <td><span style="color:black;">@item.fname @item.mname @item.lname</span></td>
+                            </tr>
+                            <tr>
+                                <td><span style="color:black;font-weight:bold">Shipping Address:</span></td>
+                                <td>
+                                    @if (Session["delivery_address"] == null)
+                                    {
+                                        <span style="color:black;">@item.address</span>
+                                        <a href="" data-toggle="modal" data-target="#myModal" style="color: #f67777;text-decoration:underline">(Change Shipping Address)</a>
+                                    }
+                                    else
+                                    {
+                                        <span style="color:black;">@Session["delivery_address"]</span>
+                                        <a href="" data-toggle="modal" data-target="#myModal" style="color: #f67777;text-decoration:underline">(Change Shipping Address)</a>
+                                    }
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span style="color:black;font-weight:bold">Contact:</span></td>
+                                <td><span style="color:black;">@item.mobile</span></td>
+                            </tr>
+                            <tr>
+                                <td><span style="color:black;font-weight:bold">Email:</span></td>
+                                <td><span style="color:black;">@item.email</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr />
+        <div class="grid_3 grid_4">
+            <div class="page-header">
+                <h1 style="font-weight:bold">Your order details</h1>
+            </div>
+            <div class="table-responsive">
+                <table class="table-heading table-bordered simpleCart_shelfItem">
+                    <tr>
+                        <th></th>
+
+                        <th>Product Image</th>
+                        <th>Products </th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+
+                    </tr>
+
+                    @foreach (var item in Model.cartitems)
+                    {
+                        <tr class="cart-header">
+
+                            <td>
+                                <a href="@Url.Action("removeorderitem", "User_new", new { @id = item.cart_id })"><i class="glyphicon glyphicon-remove-circle" style="color: #f67777; font-size: 30px"></i></a>
+                            </td>
+
+                            <td>
+                                <img src="@Url.Content(item.image)" height="100px" width="100px" class="img-responsive at-in" alt="" />
+
+                            </td>
+                            <td>
+                                <div>
+                                    <h5>@item.name</h5>
+
+                                </div>
+                            </td>
+                            <td>@item.price</td>
+                            <td>@item.quantity</td>
+
+                            <td class="item_price">@item.total</td>
+
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+        </div>
+        <hr />
+        <div class="grid_3 grid_4">
+            <div style="padding-left:850px">
+                <h3 style="font-weight:bold">Grand Total: @Session["grand_total"]</h3>
+            </div>
+            <div class="produced">
+                <a href="@Url.Action("cartcheck2","User_new")" class="hvr-skew-backward">Make Payment</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" style="margin-top:10%;">
+    @Html.Partial("addressedit")
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+
+

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Home1";
+    Layout = "~/Views/Shared/user_master.cshtml";
+}
+<div id="content-wrapper-parent">
+    <div id="content-wrapper">
+        <!-- Content -->
+        <div id="content" class="clearfix">
+            <div id="breadcrumb" class="breadcrumb">
+                <div itemprop="breadcrumb" class="container">
+                    <div class="row">
+                        <div class="col-md-24">
+                            <a href="index-2.html" class="homepage-link" title="Back to the frontpage">Home</a>
+                            <span>/</span>
+                            <span class="page-title">Create Account</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <div id="page-header" class="col-md-24">
+                            <h1 id="page-title">Register</h1>
+                        </div>
+                        <div id="col-main" class="col-md-24 register-page clearfix">
+                            <form method="post" action="http://demo.designshopify.com/account" id="create_customer" accept-charset="UTF-8">
+                                <input value="create_customer" name="form_type" type="hidden"><input name="utf8" value="✓" type="hidden">
+                                <ul id="register-form" class="row list-unstyled">
+                                    <li id="first_namef">
+                                        <label class="control-label" for="first_name">First Name</label>
+                                        <input name="customer[first_name]" id="first_name" class="form-control" type="text">
+                                    </li>
+                                    <li class="clearfix"></li>
+                                    <li id="last_namef">
+                                        <label class="control-label" for="last_name">Last Name</label>
+                                        <input name="customer[last_name]" id="last_name" class="form-control " type="text">
+                                    </li>
+                                    <li class="clearfix"></li>
+                                    <li id="emailf" class="">
+                                        <label class="control-label" for="email">Your Email <span class="req">*</span></label>
+                                        <input name="customer[email]" id="email" class="form-control " type="email">
+                                    </li>
+                                    <li class="clearfix"></li>
+                                    <li id="passwordf" class="">
+                                        <label class="control-label" for="password">Your Password <span class="req">*</span></label>
+                                        <input value="" name="customer[password]" id="password" class="form-control password" type="password">
+                                    </li>
+                                    <li class="clearfix"></li>
+                                    <li class="unpadding-top action-last">
+                                        <button class="btn" type="submit">Create an Account</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+﻿@model jewellery_project.Models.User
+
+@using (Html.BeginForm("Orderdetails", "User_new", FormMethod.Post))
+{
+    <div class="container" style="background-color:white; width:40%; border-radius:10px; margin:auto;">
+        <br />
+        @Html.HiddenFor(m => m.user_id)
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <a href="#" data-dismiss="modal" class="close">&times;</a>
+                </div>
+                <br />
+
+                <div class="row">
+                    <label for="poffer">Delivery Address</label>
+                    @Html.TextAreaFor(m => m.address, new { @class = "form-control",@required="" })
+                    @Html.ValidationMessageFor(m => m.address, "", new { @class = "text-danger" })
+
+
+                </div>
+               
+
+                <br />
+                <div class="row">
+
+                    <input type="submit" name="command" value="Save Change" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br />
+    </div>
+
+}
