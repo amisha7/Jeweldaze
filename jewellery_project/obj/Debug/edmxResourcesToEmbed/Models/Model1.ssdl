@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jewellary_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fname" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="20" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_category">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_city">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="s_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_collection">
+    <Key>
+      <PropertyRef Name="col_id" />
+    </Key>
+    <Property Name="col_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_custom">
+    <Key>
+      <PropertyRef Name="custom_id" />
+    </Key>
+    <Property Name="custom_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="mobile" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="subject" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_feedback">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="comment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_product">
+    <Key>
+      <PropertyRef Name="p_id" />
+    </Key>
+    <Property Name="p_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_id" Type="int" Nullable="false" />
+    <Property Name="col_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="price" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="color" Type="int" Nullable="false" />
+    <Property Name="size" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="offer" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_state">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_stock">
+    <Key>
+      <PropertyRef Name="stock_id" />
+    </Key>
+    <Property Name="stock_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="stock" Type="int" Nullable="false" />
+    <Property Name="DOC" Type="datetime" Nullable="false" />
+    <Property Name="DOM" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="jewellary_dbModelStoreContainer">
+    <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_category" EntityType="Self.tbl_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_city" EntityType="Self.tbl_city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_collection" EntityType="Self.tbl_collection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_custom" EntityType="Self.tbl_custom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_feedback" EntityType="Self.tbl_feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_product" EntityType="Self.tbl_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_state" EntityType="Self.tbl_state" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_stock" EntityType="Self.tbl_stock" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

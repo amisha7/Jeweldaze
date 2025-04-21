@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jewellary_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="custom_temp">
+    <Key>
+      <PropertyRef Name="ctemp_id" />
+    </Key>
+    <Property Name="ctemp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="custom_id" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <Property Name="p_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_category">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_city">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_collection">
+    <Key>
+      <PropertyRef Name="col_id" />
+    </Key>
+    <Property Name="col_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_custom">
+    <Key>
+      <PropertyRef Name="custom_id" />
+    </Key>
+    <Property Name="custom_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subject" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_feedback">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="deliverydate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="paymentmode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="grandtotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_orderdetails">
+    <Key>
+      <PropertyRef Name="odetail_id" />
+    </Key>
+    <Property Name="odetail_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="p_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_payment">
+    <Key>
+      <PropertyRef Name="card_id" />
+    </Key>
+    <Property Name="card_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="name_on_card" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="card_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="card_exp" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cvv" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="confirmation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_product">
+    <Key>
+      <PropertyRef Name="p_id" />
+    </Key>
+    <Property Name="p_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cat_id" Type="Int32" Nullable="false" />
+    <Property Name="col_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="color" Type="Int32" Nullable="false" />
+    <Property Name="size" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="offer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_state">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_stock">
+    <Key>
+      <PropertyRef Name="stock_id" />
+    </Key>
+    <Property Name="stock_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_nm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="stock" Type="Int32" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="state_id" Type="Int32" Nullable="false" />
+    <Property Name="city_id" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="isActive" Type="Int32" Nullable="false" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOM" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tempdata">
+    <Key>
+      <PropertyRef Name="temp_id" />
+    </Key>
+    <Property Name="temp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="invoicereport">
+    <Key>
+      <PropertyRef Name="odetail_id" />
+      <PropertyRef Name="quantity" />
+      <PropertyRef Name="total" />
+    </Key>
+    <Property Name="odetail_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="fname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="lname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="deliverydate" Type="DateTime" Precision="0" />
+    <Property Name="Expr2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DOC" Type="DateTime" Precision="0" />
+    <Property Name="grandtotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="paymentmode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="p_id" Type="Int32" />
+    <Property Name="Expr3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="jewellary_dbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="custom_temp" EntityType="Self.custom_temp" />
+    <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" />
+    <EntitySet Name="tbl_cart" EntityType="Self.tbl_cart" />
+    <EntitySet Name="tbl_category" EntityType="Self.tbl_category" />
+    <EntitySet Name="tbl_city" EntityType="Self.tbl_city" />
+    <EntitySet Name="tbl_collection" EntityType="Self.tbl_collection" />
+    <EntitySet Name="tbl_custom" EntityType="Self.tbl_custom" />
+    <EntitySet Name="tbl_feedback" EntityType="Self.tbl_feedback" />
+    <EntitySet Name="tbl_order" EntityType="Self.tbl_order" />
+    <EntitySet Name="tbl_orderdetails" EntityType="Self.tbl_orderdetails" />
+    <EntitySet Name="tbl_payment" EntityType="Self.tbl_payment" />
+    <EntitySet Name="tbl_product" EntityType="Self.tbl_product" />
+    <EntitySet Name="tbl_state" EntityType="Self.tbl_state" />
+    <EntitySet Name="tbl_stock" EntityType="Self.tbl_stock" />
+    <EntitySet Name="tbl_user" EntityType="Self.tbl_user" />
+    <EntitySet Name="tempdatas" EntityType="Self.tempdata" />
+    <EntitySet Name="invoicereports" EntityType="Self.invoicereport" />
+  </EntityContainer>
+</Schema>

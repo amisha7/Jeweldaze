@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jewellary_dbModelStoreContainer" CdmEntityContainer="jewellary_dbEntities1">
+    <EntitySetMapping Name="custom_temp">
+      <EntityTypeMapping TypeName="jewellary_dbModel.custom_temp">
+        <MappingFragment StoreEntitySet="custom_temp">
+          <ScalarProperty Name="ctemp_id" ColumnName="ctemp_id" />
+          <ScalarProperty Name="custom_id" ColumnName="custom_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_admin">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_admin">
+        <MappingFragment StoreEntitySet="tbl_admin">
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cart">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_cart">
+        <MappingFragment StoreEntitySet="tbl_cart">
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_category">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_category">
+        <MappingFragment StoreEntitySet="tbl_category">
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_city">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_city">
+        <MappingFragment StoreEntitySet="tbl_city">
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_collection">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_collection">
+        <MappingFragment StoreEntitySet="tbl_collection">
+          <ScalarProperty Name="col_id" ColumnName="col_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_custom">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_custom">
+        <MappingFragment StoreEntitySet="tbl_custom">
+          <ScalarProperty Name="custom_id" ColumnName="custom_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_feedback">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_feedback">
+        <MappingFragment StoreEntitySet="tbl_feedback">
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_order">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_order">
+        <MappingFragment StoreEntitySet="tbl_order">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="deliverydate" ColumnName="deliverydate" />
+          <ScalarProperty Name="paymentmode" ColumnName="paymentmode" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="grandtotal" ColumnName="grandtotal" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_orderdetails">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_orderdetails">
+        <MappingFragment StoreEntitySet="tbl_orderdetails">
+          <ScalarProperty Name="odetail_id" ColumnName="odetail_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_payment">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_payment">
+        <MappingFragment StoreEntitySet="tbl_payment">
+          <ScalarProperty Name="card_id" ColumnName="card_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="name_on_card" ColumnName="name_on_card" />
+          <ScalarProperty Name="card_no" ColumnName="card_no" />
+          <ScalarProperty Name="card_exp" ColumnName="card_exp" />
+          <ScalarProperty Name="cvv" ColumnName="cvv" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="confirmation" ColumnName="confirmation" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_product">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_product">
+        <MappingFragment StoreEntitySet="tbl_product">
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="col_id" ColumnName="col_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="offer" ColumnName="offer" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_state">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_state">
+        <MappingFragment StoreEntitySet="tbl_state">
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_stock">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_stock">
+        <MappingFragment StoreEntitySet="tbl_stock">
+          <ScalarProperty Name="stock_id" ColumnName="stock_id" />
+          <ScalarProperty Name="product_nm" ColumnName="product_nm" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOM" ColumnName="DOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempdatas">
+      <EntityTypeMapping TypeName="jewellary_dbModel.tempdata">
+        <MappingFragment StoreEntitySet="tempdata">
+          <ScalarProperty Name="temp_id" ColumnName="temp_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoicereports">
+      <EntityTypeMapping TypeName="jewellary_dbModel.invoicereport">
+        <MappingFragment StoreEntitySet="invoicereport">
+          <ScalarProperty Name="odetail_id" ColumnName="odetail_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="deliverydate" ColumnName="deliverydate" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="grandtotal" ColumnName="grandtotal" />
+          <ScalarProperty Name="paymentmode" ColumnName="paymentmode" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

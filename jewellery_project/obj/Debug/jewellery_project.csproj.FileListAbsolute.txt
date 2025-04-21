@@ -1,0 +1,334 @@
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Owin.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\WebGrease.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.csprojResolveAssemblyReference.cache
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+E:\mvc_projects\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Owin.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\WebGrease.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
+D:\MVC_project\Jewellery_mvcproject\jewellery_project\jewellery_project\obj\Debug\jewellery_project.csprojResolveAssemblyReference.cache
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\jewellery_project.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\EntityFramework.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Owin.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\WebGrease.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\EntityFramework.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+C:\Users\patel\Desktop\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
+D:\New folder\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+D:\New folder\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
+D:\New folder\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+D:\New folder\jewellery_project\jewellery_project\bin\jewellery_project.dll
+D:\New folder\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+D:\New folder\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+D:\New folder\jewellery_project\jewellery_project\bin\EntityFramework.dll
+D:\New folder\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+D:\New folder\jewellery_project\jewellery_project\bin\Owin.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+D:\New folder\jewellery_project\jewellery_project\bin\WebGrease.dll
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+D:\New folder\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+D:\New folder\jewellery_project\jewellery_project\bin\EntityFramework.xml
+D:\New folder\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New folder\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+D:\jewellery_project\jewellery_project\bin\jewellery_project.dll
+D:\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+D:\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+D:\jewellery_project\jewellery_project\bin\CaptchaMvc.dll
+D:\jewellery_project\jewellery_project\bin\EntityFramework.dll
+D:\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+D:\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+D:\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+D:\jewellery_project\jewellery_project\bin\Owin.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+D:\jewellery_project\jewellery_project\bin\WebGrease.dll
+D:\jewellery_project\jewellery_project\bin\CaptchaMvc.pdb
+D:\jewellery_project\jewellery_project\bin\CaptchaMvc.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+D:\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+D:\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+D:\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+D:\jewellery_project\jewellery_project\bin\EntityFramework.xml
+D:\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+D:\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+D:\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
+D:\jewellery_project\jewellery_project\obj\Debug\jewellery_project.csprojResolveAssemblyReference.cache
+E:\mvc_projects\jewellery_project\jewellery_project\obj\Debug\jewellery_project.csprojResolveAssemblyReference.cache
+E:\mvc_projects\jewellery_project\jewellery_project\obj\Debug\jewellery_project.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\jewellery_project.dll.config
+E:\mvc_projects\jewellery_project\jewellery_project\bin\jewellery_project.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\jewellery_project.pdb
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Antlr3.Runtime.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\CaptchaMvc.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\EntityFramework.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Web.Infrastructure.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Newtonsoft.Json.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Owin.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Helpers.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Mvc.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Optimization.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Razor.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\WebGrease.dll
+E:\mvc_projects\jewellery_project\jewellery_project\bin\CaptchaMvc.pdb
+E:\mvc_projects\jewellery_project\jewellery_project\bin\CaptchaMvc.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Helpers.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Mvc.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Optimization.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.Razor.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.Deployment.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\System.Web.WebPages.Razor.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Newtonsoft.Json.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Antlr3.Runtime.pdb
+E:\mvc_projects\jewellery_project\jewellery_project\bin\EntityFramework.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\EntityFramework.SqlServer.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Core.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Facebook.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Cookies.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.OAuth.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Google.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.Twitter.xml
+E:\mvc_projects\jewellery_project\jewellery_project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\mvc_projects\jewellery_project\jewellery_project\obj\Debug\jewellery_project.pdb
