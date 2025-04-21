@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E2687FA-A6CB-444B-9C68-E027394B47F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>jewellery_project</RootNamespace>
+    <AssemblyName>jewellery_project</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CaptchaMvc">
+      <HintPath>..\packages\CaptchaMvc.Mvc4.1.5.0\lib\net40-full\CaptchaMvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\adminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\User_newController.cs" />
+    <Compile Include="custom_temp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="invoicereport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="tbl_admin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_cart.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_city.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_collection.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_custom.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_feedback.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_orderdetails.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_payment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_state.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_stock.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_user.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tempdata.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\font-awesome.css" />
+    <Content Include="Admin\css\font.css" />
+    <Content Include="Admin\css\jqvmap.css" />
+    <Content Include="Admin\css\lightbox.css" />
+    <Content Include="Admin\css\minimal.css" />
+    <Content Include="Admin\css\monthly.css" />
+    <Content Include="Admin\css\morris.css" />
+    <Content Include="Admin\css\style-responsive.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\images\1.png" />
+    <Content Include="Admin\images\2.png" />
+    <Content Include="Admin\images\3.png" />
+    <Content Include="Admin\images\bg.jpg" />
+    <Content Include="Admin\images\close.png" />
+    <Content Include="Admin\images\g1.jpg" />
+    <Content Include="Admin\images\g2.jpg" />
+    <Content Include="Admin\images\g3.jpg" />
+    <Content Include="Admin\images\g4.jpg" />
+    <Content Include="Admin\images\g5.jpg" />
+    <Content Include="Admin\images\g6.jpg" />
+    <Content Include="Admin\images\g7.jpg" />
+    <Content Include="Admin\images\g8.jpg" />
+    <Content Include="Admin\images\g9.jpg" />
+    <Content Include="Admin\images\mail.png" />
+    <Content Include="Admin\images\minimal.png" />
+    <Content Include="Admin\images\nav-expand.png" />
+    <Content Include="Admin\images\next.png" />
+    <Content Include="Admin\images\pass.png" />
+    <Content Include="Admin\images\prev.png" />
+    <Content Include="Admin\images\search-icon.png" />
+    <Content Include="Admin\js\bootstrap.js" />
+    <Content Include="Admin\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="Admin\js\jquery.fileupload.js" />
+    <Content Include="Admin\js\jquery.min.js" />
+    <Content Include="Admin\js\jquery.nicescroll.js" />
+    <Content Include="Admin\js\jquery.scrollTo.js" />
+    <Content Include="Admin\js\jquery.slimscroll.js" />
+    <Content Include="Admin\js\jquery.vmap.asia.js" />
+    <Content Include="Admin\js\jquery.vmap.australia.js" />
+    <Content Include="Admin\js\jquery.vmap.europe.js" />
+    <Content Include="Admin\js\jquery.vmap.js" />
+    <Content Include="Admin\js\jquery.vmap.sampledata.js" />
+    <Content Include="Admin\js\jquery.vmap.world.js" />
+    <Content Include="Admin\js\jquery2.0.3.min.js" />
+    <Content Include="Admin\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Admin\js\monthly.js" />
+    <Content Include="Admin\js\morris.js" />
+    <Content Include="Admin\js\raphael-min.js" />
+    <Content Include="Admin\js\script.js" />
+    <Content Include="Admin\js\scripts.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Crystal Reports 2011\BusinessObjects_KCDefinitions_dfo.xml" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Abalone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Acid_Burn.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Ashes.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Blue_Blocks.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Blue_Cement.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Blue_Fabric.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Blue_Glass.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Blue_Sky.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Chalk.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Clay.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Dark_Patina.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Dry_Earth.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Earth.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Goldweave.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Gold_Bar.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Gray_Sharkskin.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Green_Mosaic.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Lumpy_Sand.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Mesh.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Metal_Weave.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Mossy_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Mottled_Rust.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Orange_Bumps.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Paint_Splatter.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Pink_Trails.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Purple_Reaction.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Red_Metal_Weave.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Rust_Pebbles.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Sandstone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Silver_Foil.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Silver_Pearls.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Terracotta_Tile.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Water.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Assorted\Zebra.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Black_Grey_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Blue_Grey_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Gray_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Gray_Green_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Green_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Green_Tan_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Peach_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Red_Black_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Red_Rich_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Red_Soft_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\White_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\White_Gray_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Granite\Yellow_Tan_Granite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\DarkGreyWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\LightGreyWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\MedGreyWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Grey\RichGreyWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Black_Gray_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Blue_Black_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Blue_White_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Brown_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Cream_Veined_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Gray_Green_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Gray_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Gray_Speckled_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Green_Black_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Green_Veined_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Light_Brown_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Orange_Black_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\Pink_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\White_Gray_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Marble\White_Veined_Marble.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkAquaWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBlueWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkBuffWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkGreenWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkMossWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkPurpWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkRedWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Dark\DarkVioletWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightAquaWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBlueWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightBuffWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightGreenWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightMossWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightPurpWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightRedWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Light\LightVioletWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedAquaWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBlueWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedBuffWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedGreenWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedMossWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedPurpWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedRedWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Med\MedVioletWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichAquaWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBlueWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichBuffWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichGreenWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichMossWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichPurpWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichRedWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletGranite.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletGranite2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletMarble1.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletMarble2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletRock.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletRock2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletWood.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Mixed Rich\RichVioletWood2.BMP" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Blue_Black_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Brown_Veined_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Buff_Quartz.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Dark_Mottled_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Gray_Brown_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Green_Gray_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Green_Malachite.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Light_Blue_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Light_Brown_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Light_Mottled_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Olive_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Pink_and_Gray_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Soft_Green_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\Tan_Steaked_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Stone\White_and_Gray_Stone.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Alder_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Bleached_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Burl_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Cedar_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Cherry_Rough_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Cherry_Stained_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Gray_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Green_Stained_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Koa_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Maple_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Oak_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Textures\Wood\Purpleheart_Wood.bmp" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\CRViewer_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\csprintdlg_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\LCIDTable.xml" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\PrintControl_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\pvlocale-1-0.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\sviewhlp_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\swebrs_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_cs.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_da.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_de.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_en.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_es.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_fi.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_fr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_hu.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_it.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ja.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ko.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_nb.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_nl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_pl.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_pt.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ru.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_sk.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_sv.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_th.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_tr.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_zh_CN.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_zh_TW.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\pvlocale-1-0.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\xerces-c_2_7.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\win64_x64\XERCES27_LICENSE.txt" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\xerces-c_2_7.dll" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\XERCES27_LICENSE.txt" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allInOne.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_cs.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_da.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_de.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_en.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_es.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_fi.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_fr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_hu.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_it.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_ja.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_ko.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_nb.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_nl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_pl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_pt.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_ru.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_sk.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_sv.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_th.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_tr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_zh_CN.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\allStrings_zh_TW.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\crsmarttag.asp" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\crystalimagehandler.asp" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\css\cedefault.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\css\default.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\css\exception.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\css\prompting.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\html\calendar.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\html\calendarbottom.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\html\calendartop.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\imagehandlerdotnetbridge.aspx" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\buttonl.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\buttonm.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\buttonr.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\calendar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\calendar_param.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewerinclude.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\api.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\bobjcallback.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ButtonList.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Calendar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Colors.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\common.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\crv.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Dialogs.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\dom.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\encoding.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\event.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\GroupTree.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\GroupTreeListener.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\GroupTreeNode.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\html.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ImageSprites.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\allInOne.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\calendar.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\catalyst.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\clearValues.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\clear_x.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\closePanel.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\delete.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\export.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\filledCircle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\first.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\last.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\line.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\logo.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\magnify.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\min.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\next.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\param_dirty.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\param_info.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\param_run.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\param_warning.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\plus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\prev.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\print.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\refresh.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\search.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\separator.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\StackedTab.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\style.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\undo.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\up.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\initDhtmlLib.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\IOAdapters.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\LeftPanel.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\PanelHeader.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\PanelNavigator.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Parameter.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterController.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterDialog.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterPanel.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterUI.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ParameterValueRow.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\PromptPage.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\RangeField.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ReportAlbum.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ReportPage.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ReportView.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Separator.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\SignalDisposer.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\StackedPanel.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\StackedTab.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\StateManager.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Statusbar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_cs.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_da.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_de.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_en.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_es.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_fi.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_fr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_hu.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_it.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_ja.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_ko.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_nb.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_nl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_pl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_pt.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_ru.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_sk.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_sv.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_th.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_tr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_zh_CN.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\strings_zh_TW.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\TextCombo.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\TextField.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Toolbar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ToolPanel.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\Viewer.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\ViewerListener.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\crviewer\WarningPopup.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\bolist.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\calendar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\dialog.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\dom.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\empty.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\borders.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\help.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\loading.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\lov.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\min.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\plus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\print.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\print_fe.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\prompt.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\swap.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\transp.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\images\tree.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\da\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\de\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\en\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\es\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\it\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\th\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\lov.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\menu.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\palette.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\prompttree.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\psheet.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\bolist.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\buttons.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\calendar.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\checktree.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\default.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\dim.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\empty.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\format.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\framezone.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\grabber.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\lov.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\measure.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\menu.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\navigation.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\palettes.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\pane.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\tabs.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\treeview.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\treeview.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\validator\default.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dhtmllib\waitdialog.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\dt_param.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\external\date.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\FlexParameterBridge.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\KeyDownEvent.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\log4javascript\log4javascript.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\log4javascript\main.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\3rdParty.txt" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Async.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Base.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Color.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Controls.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\DateTime.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\DOM.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\DragAndDrop.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Format.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Iter.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\License.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Logging.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\LoggingPane.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\MochiKit.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\MockDOM.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\New.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Signal.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Sortable.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Style.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Test.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\Visual.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\MochiKit\__package__.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\previewerror.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\prompts.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\prompts_param.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\js\swfobject\swfobject.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\parameterUIController-compressed.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\preview.aspx" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\processindicator.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\promptengine-compressed.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\css\promptengine2.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\css\promptengine_default.css" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\html\calendar.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\html\calendarbottom.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\html\calendartop.html" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\addallfield.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\addallfield_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\addfield.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\addfield_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\back.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\background_field.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\back_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\button.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\button_left_normal.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\button_middle_normal.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\button_right_normal.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\calendar.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\cfilter.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\cfilter_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\dialogelements.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\dialogtitle.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\error.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\errormsg.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\filter.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\filter_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\forward.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\forward_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\info.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\infomsg.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\minus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\next.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\next_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\plus.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\prev.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\prev_over.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\resize.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\transp.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\warning.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\images\warningmsg.gif" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\initDhtmlLib.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_calendar.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_calendar2.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_prompts.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_prompts2.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_da.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_de.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_en.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_es.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_it.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_th.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\urlreporting\activexviewer.js" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\urlreporting\appletviewer.js" />
+    <Content Include="Crystal Reports 2011\HelpFiles\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\de\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\de\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\en\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\en\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\es\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\es\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\fr\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\fr\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\it\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\it\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ja\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ja\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ko\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ko\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ru\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ru\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_CN\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_CN\crnet_dg_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_TW\crnet_api_2010.cab" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_TW\crnet_dg_2010.cab" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic03.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic04.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic05.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic06.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic07.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic08.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic09.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic10.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic11.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic12.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic13.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic14.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic15.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic16.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic17.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic18.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Basic19.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Big01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Big02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small03.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small05.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small06.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Small07.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square03.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square04.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square05.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square06.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square07.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square08.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square09.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\Square10.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\SquareFlat01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\SquareFlat02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\SquareTall01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinNarrow01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinNarrow02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinNarrow03.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinNarrow04.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide02.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide03.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide04.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide05.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide06.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide07.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide08.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide09.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide10.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide11.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide12.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide13.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide14.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide15.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWide16.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\3D View Angles\ThinWideFlat01.3da" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blue2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blues.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blue_Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blue_Down_to_Red.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blue_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Blue_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Blue.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Gold.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Gold_2.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Gold_3.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Silver.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Brushed_Silver_2.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Chrome.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Clear_Water.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Copper.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Cream.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Current.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Cyan2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Cyan_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Cyan_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Blue_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Blue_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Cyan_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Cyan_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Green_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Green_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Purple_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Purple_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Red_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Red_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Yellow_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Dark_Yellow_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Deep_Purple.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Default.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\DkGrey2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Easter.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Golden.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Green_Cream.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Green_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Green_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Grey.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Lime2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Maroon.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Midnight.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Mint.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Mossy.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Peach.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Purp2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Purple_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Purple_Haze.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Purple_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Red2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Red_Down_to_Blue.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Red_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Red_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Rust.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Sea_Wash.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Silvery.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Sky.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Sky2.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Smoggy.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Snow.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Soft_Violet.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Storm.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Sunset.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Violet.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Water.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Yellow2Black.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Yellow_Drop.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Gradients\Yellow_to_White.3ws" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DAreas.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DBars.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DColumns.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DColumns02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DCubes.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DLines.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DLines2.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\3DLinesVis.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\BarClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnClustered02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnPercent02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnStacked02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\ColumnStackedl05.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\DABarStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\DABarStacked02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\DAColumnStackedl01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\DAColumnStackedl02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\LineAbsolute01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\MultiPie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\MultiPie02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\PercentArea.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\PercentArea01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\Ring01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\StackedArea01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Basic\StackedArea02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\AbsoluteArea.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\BarPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\BarPercent02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\Bubble01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\BubbleSquare01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\ColumnPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\ColumnPercent02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\DABarStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\DABubble01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\GL3DArea01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\GL3DArea02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\GL3DArea03.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\LineAbsolute01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\LineAbsolute02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\MultiPie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Big Data Sets\StackedLine01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\3DBarChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\3DSurfaceChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\AreaChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\BarChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\DoughnutChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\FunnelChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\GaugeChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\LineChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\PieChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\RadarChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\ScatterChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Corporate\StockChart.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Gradients\BarClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Gradients\BarClustered02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Gradients\ColumnStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Gradients\Histogram01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Gradients\LineAbsolute01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\LandscapeBarPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\LandscapeColumnClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\LandscapeColumnStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\LandscapeMultiPie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\LandscapeStackedArea.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\PortraitColumnStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\PortraitDABarStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize B&amp;W\PortraitDAColumnClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeBarPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeColumnPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeColumnStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeGLBarStacked01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeLineAbsolute01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\LandscapeSingleBinPie.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\PortraitAreaStacked.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\PortraitColumnStackedl01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\PortraitLineAbsolute01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\PortraitMultiPie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\LetterSize Color\PortraitSingleBinPie.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\BarClustered01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\BarPercent01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\BarPercent02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\ColumnStackedl01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\MultiPie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\MultiPie02.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\MultiPie03.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\Pie01.3tf" />
+    <Content Include="Crystal Reports 2011\ChartSupport\Templates\Surveys\Pie02.3tf" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\ActiveXControls\crviewer.dep" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\crsmarttag.jsp" />
+    <Content Include="Crystal Reports 2011\crystalreportviewers\preview.jsp" />
+    <Content Include="Crystal Reports 2011\HelpFiles\de\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\en\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\es\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\fr\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\it\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ja\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ko\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\ru\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_CN\helpcontentsetup.msha" />
+    <Content Include="Crystal Reports 2011\HelpFiles\zh_TW\helpcontentsetup.msha" />
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Cascade.js" />
+    <Content Include="Scripts\Cascade1.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="User\css\bootstrap.css" />
+    <Content Include="User\css\chocolat.css" />
+    <Content Include="User\css\flexslider.css" />
+    <Content Include="User\css\form.css" />
+    <Content Include="User\css\jstarbox.css" />
+    <Content Include="User\css\mystyle.css" />
+    <Content Include="User\css\mystyle1.css" />
+    <Content Include="User\css\mystyle2.css" />
+    <Content Include="User\css\mystyle3.css" />
+    <Content Include="User\css\mystyle4.css" />
+    <Content Include="User\css\popuo-box.css" />
+    <Content Include="User\css\style.css" />
+    <Content Include="User\css\style4.css" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="User\images\b-arrow.png" />
+    <Content Include="User\images\back.jpg" />
+    <Content Include="User\images\bridal.jpg" />
+    <Content Include="User\images\ca.png" />
+    <Content Include="User\images\cart.png" />
+    <Content Include="User\images\category_fingerring.jpg" />
+    <Content Include="User\images\category_fingerring_160x240.jpg" />
+    <Content Include="User\images\ch.jpg" />
+    <Content Include="User\images\ch1.jpg" />
+    <Content Include="User\images\ch2.jpg" />
+    <Content Include="User\images\close.png" />
+    <Content Include="User\images\f1.png" />
+    <Content Include="User\images\f2.png" />
+    <Content Include="User\images\f3.png" />
+    <Content Include="User\images\gemstone.jpg" />
+    <Content Include="User\images\ic.png" />
+    <Content Include="User\images\ic1.png" />
+    <Content Include="User\images\ic2.png" />
+    <Content Include="User\images\ic3.png" />
+    <Content Include="User\images\img-sprite.png" />
+    <Content Include="User\images\lg.png" />
+    <Content Include="User\images\lg1png_167x53.png" />
+    <Content Include="User\images\log.png" />
+    <Content Include="User\images\logo.png" />
+    <Content Include="User\images\logo2.png" />
+    <Content Include="User\images\me.png" />
+    <Content Include="User\images\me1.png" />
+    <Content Include="User\images\novelty.jpg" />
+    <Content Include="User\images\pc.jpg" />
+    <Content Include="User\images\pc1.jpg" />
+    <Content Include="User\images\pc2.jpg" />
+    <Content Include="User\images\pc3.jpg" />
+    <Content Include="User\images\pc4.jpg" />
+    <Content Include="User\images\pc5.jpg" />
+    <Content Include="User\images\pc6.jpg" />
+    <Content Include="User\images\pc7.jpg" />
+    <Content Include="User\images\pi.jpg" />
+    <Content Include="User\images\pi1.jpg" />
+    <Content Include="User\images\pi2.jpg" />
+    <Content Include="User\images\pi3.jpg" />
+    <Content Include="User\images\platinum.jpg" />
+    <Content Include="User\images\search.png" />
+    <Content Include="User\images\si.jpg" />
+    <Content Include="User\images\si1.jpg" />
+    <Content Include="User\images\si2.jpg" />
+    <Content Include="User\images\slide-image-1.jpg" />
+    <Content Include="User\images\slide-image-3.jpg" />
+    <Content Include="User\images\tick.png" />
+    <Content Include="User\images\tick1.png" />
+    <Content Include="User\images\Untitled2_1_170x102.png" />
+    <Content Include="User\images\Untitled_170x102.png" />
+    <Content Include="User\images\wall.jpg" />
+    <Content Include="User\images\wall2.jpg" />
+    <Content Include="User\images\wall3.jpg" />
+    <Content Include="User\images\XJ_LogoShadow.png" />
+    <Content Include="User\js\bootstrap.min.js" />
+    <Content Include="User\js\classie.js" />
+    <Content Include="User\js\imagezoom.js" />
+    <Content Include="User\js\jquery.chocolat.js" />
+    <Content Include="User\js\jquery.flexslider.js" />
+    <Content Include="User\js\jquery.magnific-popup.js" />
+    <Content Include="User\js\jquery.min.js" />
+    <Content Include="User\js\jstarbox.js" />
+    <Content Include="User\js\modernizr.custom.72111.js" />
+    <Content Include="User\js\simpleCart.min.js" />
+    <Content Include="User\js\uisearch.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\admin_master.cshtml" />
+    <Content Include="Views\admin\Dashboard.cshtml" />
+    <Content Include="Views\admin\State.cshtml" />
+    <Content Include="Views\admin\City.cshtml" />
+    <Content Include="Views\admin\Category.cshtml" />
+    <Content Include="Views\admin\Collection.cshtml" />
+    <Content Include="Views\admin\Product.cshtml" />
+    <Content Include="Views\admin\custom.cshtml" />
+    <Content Include="Views\admin\Feedback.cshtml" />
+    <Content Include="Views\admin\Login.cshtml" />
+    <Content Include="Views\admin\Stock.cshtml" />
+    <Content Include="Views\admin\stockedit.cshtml" />
+    <Content Include="Views\Shared\Usermaster.cshtml" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="User\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="User\fonts\Oxygen-Bold.ttf" />
+    <Content Include="User\fonts\Oxygen-Regular.ttf" />
+    <Content Include="User\fonts\Ubuntu-Bold.ttf" />
+    <Content Include="User\fonts\Ubuntu-Regular.ttf" />
+    <Content Include="Views\User_new\Home.cshtml" />
+    <Content Include="Views\User_new\Reg.cshtml" />
+    <Content Include="Views\User_new\Login.cshtml" />
+    <Content Include="Views\User_new\Product.cshtml" />
+    <Content Include="Views\User_new\Productdetails.cshtml" />
+    <Content Include="Views\User_new\Custom_made.cshtml" />
+    <Content Include="Views\admin\User_details.cshtml" />
+    <Content Include="Views\User_new\Cart.cshtml" />
+    <Content Include="Views\User_new\feedback.cshtml" />
+    <Content Include="Views\User_new\contact_us.cshtml" />
+    <Content Include="Views\User_new\Myaccount.cshtml" />
+    <Content Include="Views\User_new\checkout.cshtml" />
+    <Content Include="Views\User_new\Orderdetails.cshtml" />
+    <Content Include="Views\User_new\Orderconfirm.cshtml" />
+    <Content Include="Views\User_new\addressedit.cshtml" />
+    <Content Include="Views\admin\Order.cshtml" />
+    <Content Include="Views\admin\orderedit.cshtml" />
+    <Content Include="Views\admin\Order_nt.cshtml" />
+    <Content Include="Views\admin\custom_nt.cshtml" />
+    <Content Include="Views\User_new\Our_store.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Photos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1048</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1048/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
